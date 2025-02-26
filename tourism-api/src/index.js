@@ -10,7 +10,8 @@ app.use(express.json());
 // Sử dụng routes
 app.use('/api/users', userRoutes);
 
-const PORT = 3000;
+// Đổi cách lấy PORT
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server đang chạy tại http://localhost:${PORT}`);
+  console.log(`Server đang chạy tại port ${PORT}`);
 });
